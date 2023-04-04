@@ -1,0 +1,48 @@
+<h4> All request</h4> 
+<div class="search">
+  <h5> Filters</h5> 
+   <input
+    type="text"
+    [(ngModel)]="term"
+    class="searchTerm input-filter"
+  />
+
+   <select class="input-brand">
+    <option [ngValue]="null" disabled >Select</option>
+    <option *ngFor="let br of brands_" [ngValue]="br.id">{{br.name}}</option>
+  </select>
+
+  <button type="button" class="btn btn-primary align-button" (click)='sendData()'>Filter</button>
+</div>
+
+<table class="table table-stl">
+  <thead class="table-success">
+    <tr>
+      <th>Status</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Brand</th>
+      <th>Submission</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comp of list_ | filter: term" [routerLink]="['/edit-campagnes/', comp.requestId]" class="corsor-stl">
+      <td>
+      {{ comp.campaignName }}
+      </td>
+      <td>
+        {{ comp.affiliate.name }} 
+      </td>
+      <td *ngIf="comp.advice === true">
+        <span class="badge bg-success">active</span>
+      </td>
+       <td *ngIf="comp.advice === false">
+        <span class="badge bg-secondary">request</span>
+      </td>
+      <td>{{ comp.brand.name }}</td>
+      <td>
+       {{ comp.createdDate | date: 'dd-MM-yyyy'}}
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,28 @@
+.input-filter {
+   width: 30%;
+   margin-right: 3%;
+   margin-left: 1%;
+}
+
+.input-brand {
+   width: 10%;
+   margin-right: 3%;
+   margin-left: 1%;
+}
+.table-stl{
+   margin-top: 2%;
+}
+.btn-primary {
+   color: #f8fafb;
+   background-color: #241d6a;
+   border-color: #241d6a;
+   width: 5%;
+   font-style: initial;
+   font-weight: bold;
+}
+.align-button {
+  float: right;
+}
+.corsor-stl {
+   cursor: pointer;
+}

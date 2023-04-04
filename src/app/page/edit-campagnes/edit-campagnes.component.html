@@ -1,0 +1,114 @@
+ 
+
+  <form>
+	 <div class="form-group row">
+	    <label for="staticEmail" class="col-sm-2 col-form-label">Brands *</label>
+	      <div class="col-sm-10">
+		     <select class="form-control input-brand">
+		       <option [ngValue]="null" disabled >Select</option>
+		       <option *ngFor="let br of brands_" [ngValue]="br.id">{{br.name}}</option>
+		     </select>
+	      </div>
+	 </div>
+	 <div class="form-group">
+	    <label for="staticEmail" class="col-sm-2 col-form-label" for="compainName">Companie name *</label>
+	    <input type="name" class="form-control" id="compainName" aria-describedby="name"/>
+	 </div>
+
+	 <label for="staticEmail" class="col-sm-2 col-form-label">Media *</label>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-check">
+	          <input class="form-check-input" type="checkbox" value="" id="collaboration">
+	          <label class="form-check-label" for="collaboration">
+	             Collaboration
+	          </label>
+	        </div>
+
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="innovation">
+		       <label class="form-check-label" for="innovation">
+		         New product / innovation
+		       </label>
+		    </div>
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="print">
+		       <label class="form-check-label" for="print">
+		         Print
+		       </label>
+		    </div>
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="radio">
+		       <label class="form-check-label" for="radio">
+		         Radio
+		       </label>
+		    </div>
+
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="sponsors">
+		       <label class="form-check-label" for="sponsors">
+		        Sponsorship
+		       </label>
+		    </div>	
+
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="website">
+		       <label class="form-check-label" for="website">
+		         Website
+		       </label>
+		    </div>
+	    </div>
+
+	  <div class="col-md-4">
+	    <div class="form-check">
+	       <input class="form-check-input" type="checkbox" value="" id="labeling">
+	       <label class="form-check-label" for="labeling">
+	         Labeling / Packaging
+	       </label>
+		    </div>
+
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="ogh">
+		       <label class="form-check-label" for="ogh">
+		         OGH
+		       </label>
+		    </div>
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="promotion">
+		       <label class="form-check-label" for="promotion">
+		         Promotions
+		       </label>
+		    </div>
+
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="socialmedia">
+		       <label class="form-check-label" for="socialmedia">
+		         Social Media
+		       </label>
+		    </div>
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="onlinevideo">
+		       <label class="form-check-label" for="onlinevideo">
+		         TVC / Online video
+		       </label>
+		    </div>
+
+		    <div class="form-check">
+		       <input class="form-check-input" type="checkbox" value="" id="others">
+		       <label class="form-check-label" for="others">
+		         Others
+		       </label>
+		    </div>
+	   </div>
+    </div>
+	  <div>
+	  	<label for="staticEmail" class="col-sm-2 col-form-label" for="deadline">Deadline for decision </label>
+	  	  <input type="date" value="" id="date-decision" class="form-control"/> 
+	  </div>
+	  
+	  <button type="button" class="btn btn-primary align-button" (click)='send()'>Enregistrer</button>
+</form>
+
+
+
