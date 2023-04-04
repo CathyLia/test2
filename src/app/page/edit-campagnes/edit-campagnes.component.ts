@@ -26,8 +26,6 @@ export class EditCampagnesComponent implements OnInit {
         this.brands_ = dataBrand;
     }) 
   }
-
-
   send() {
   	console.log('Enregistrer avec succes')
   }
